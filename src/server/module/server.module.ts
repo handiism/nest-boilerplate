@@ -4,6 +4,7 @@ import { ServerController } from './server.controller';
 import { LoggerModule } from 'nestjs-pino';
 import { JwtModule } from '@nestjs/jwt';
 import { FastifyReply, FastifyRequest } from 'fastify';
+import { UserModule } from 'src/modules/user/user.module';
 
 @Module({
   imports: [
@@ -46,6 +47,7 @@ import { FastifyReply, FastifyRequest } from 'fastify';
         },
       }),
     }),
+    UserModule,
   ],
   controllers: [ServerController],
 })
