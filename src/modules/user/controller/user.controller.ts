@@ -22,7 +22,6 @@ export class UserController {
 
   @Get()
   findAll() {
-    console.log('masuk sini');
     return this.userService.findAll();
   }
 
